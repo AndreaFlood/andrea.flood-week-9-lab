@@ -1,32 +1,30 @@
-public class Count{
-//count the letters
-    //declare Var
+public class Count {
+	// count the letters
+	// declare Var
 	private String userInput;
-    private StringBuffer strBuff;
-    private String countLetters;
+	private StringBuffer strBuff;
 
-	//constructor
-	public Count(){
-		strBuff=new StringBuffer();
+	// constructor
+	public Count() {
+		strBuff = new StringBuffer();
 	}
 
-	//set
-	public void setUserInput(String userInput){
-		this.userInput=userInput;
-		}
+	// set
+	public void setUserInput(String userInput) {
+		this.userInput = userInput;
+	}
 
-	//compute
-	public void countLetters(){
-		for(int i=0; i<userInput.length(); i++){
-			if(Character.isLetter(userInput.charAt(i))){
+	// compute
+	public int countString() {
+		for (int i = 0; i < userInput.length(); i++) {
+			char myChar = userInput.charAt(i);
+
+			if (Character.isLetter(myChar)) {
+
 				strBuff.append(userInput.charAt(i));
 			}
 		}
-	}
-
-	//get
-	public String getCountLetters(){
-		return countLetters;
+		return strBuff.length();
 	}
 
 }

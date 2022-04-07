@@ -1,28 +1,31 @@
+import java.util.Scanner;
+
 import javax.swing.JOptionPane;
-public class StringApp{
-	public static void main( String[] args){
-//declare vars
-    String userInput;
-   	String countLetters;
 
-//create object
-	Count co;
-	co=new Count();
+public class StringApp {
+	public static void main(String[] args) {
+		// declare vars
+		String userInput;
+		int countLetters;
+		Scanner myInput = new Scanner(System.in);
+		// create object
+		Count co;
+		co = new Count();
 
-//input
-	userInput=JOptionPane.showInputDialog(null,"Enter Message");
+		// input
+		// userInput = JOptionPane.showInputDialog(null, "Enter Message");
+		System.out.println("enter message");
 
-//set
-    co.setUserInput(userInput);
+		userInput = myInput.nextLine();
 
-//compute
-	co.countString();
+		// set
+		co.setUserInput(userInput);
 
-//get
-	countLetters=co.getCountLetters();
+		// compute
+		countLetters = co.countString();
 
-//output
-	System.out.printLn("count= " + countLetters);
+		// output
+		System.out.println("count= " + countLetters);
 
 	}
 }
