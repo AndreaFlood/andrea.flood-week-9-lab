@@ -22,7 +22,7 @@ public class StringApp{
 	countLetters=co.getCountLetters();
 
 //output
-	System.out.printLn("count= " + countLetters);
+	System.out.println("count= " + countLetters);
 
 	}
 }

@@ -16,7 +16,7 @@ public class Count{
 		}
 
 	//compute
-	public void countLetters(){
+	public void countString(){
 		for(int i=0; i<userInput.length(); i++){
 			if(Character.isLetter(userInput.charAt(i))){
 				strBuff.append(userInput.charAt(i));
