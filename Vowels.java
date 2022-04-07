@@ -3,7 +3,7 @@ public class Vowels{
     //declare Var
 	private String userInput;
     private StringBuffer strBuff;
-    private String countLetters;
+    private String countVowels;
 
 	//constructor
 	public Vowels(){
@@ -17,10 +17,10 @@ public class Vowels{
 		}
 
 	//compute
-	public void countString(){
+	public void countVowels(){
 		for(int i=0; i<userInput.length(); i++){
 			if(Character.isLetter(userInput.charAt(i))){
-				countLetters=countLetters+1;
+				countVowels=countVowels+1;
 			}
 		}
 	}
