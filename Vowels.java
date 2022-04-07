@@ -1,33 +1,30 @@
 public class Vowels{
-
-    //declare Var
+    // declare Var
 	private String userInput;
-    private StringBuffer strBuff;
-    private String countVowels;
+	private int countVowels;
 
-	//constructor
-	public Vowels(){
-		strBuff=new StringBuffer();
-
+	// constructor
+	public Vowels() {
+		countVowels = 0;
+	}
+	// set
+	public void setUserInput(String userInput) {
+		this.userInput = userInput;
 	}
 
-	//set
-	public void setUserInput(String userInput){
-		this.userInput=userInput;
-		}
+	// compute
+	public int countVowels() {
+		for (int i = 0; i < this.userInput.length(); i++) {
 
-	//compute
-	public void countVowels(){
-		for(int i=0; i<userInput.length(); i++){
-			if(Character.isLetter(userInput.charAt(i))){
-				countVowels=countVowels+1;
+			// Convert individual characters to lower case for comparison
+			char character = userInput.toLowerCase().charAt(i);
+			if(character=='a'||character=='e'||character=='i'||character=='o'||character=='u'){
+				// If character is vowel, increase counter by 1
+				this.countVowels ++;
 			}
 		}
+		
+		//return the counter value
+		return this.countVowels;
 	}
-
-	//get
-	public String getCountLetters(){
-		return countLetters;
-	}
-
 }
