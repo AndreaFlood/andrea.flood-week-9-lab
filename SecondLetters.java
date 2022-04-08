@@ -8,14 +8,23 @@ public class SecondLetters{
 	}
 
 	public void setUserInput(String userInput){
-		this.userInput=userInput;
+		this.userInput=userInput.toLowerCase();
 	}
 
 	public void compSecondLetters(){
-		for(int i=1; i< userInput.length();i=i+2){
-			strBuff.append(userInput.charAt(i));
+		String lower = userInput.toLowerCase().replaceAll("\\s", "");
+		for(int i=0; i< lower.length(); i++){
+			if (i % 2 == 0){
+				// pass
+			}else{
+				if (Character.isLetter(lower.charAt(i)) == true) {
+					strBuff.append(lower.charAt(i));
+				};
+			}
 		}
+
 		second=strBuff.toString();
+		System.out.println(second);
 	}
 
 	public String getSecond(){

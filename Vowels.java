@@ -13,7 +13,7 @@ public class Vowels{
 	}
 
 	// compute
-	public int countVowels() {
+	public void countVowels() {
 		for (int i = 0; i < this.userInput.length(); i++) {
 
 			// Convert individual characters to lower case for comparison
@@ -23,7 +23,8 @@ public class Vowels{
 				this.countVowels ++;
 			}
 		}
-		
+	}
+	public int getCountVowels(){
 		//return the counter value
 		return this.countVowels;
 	}

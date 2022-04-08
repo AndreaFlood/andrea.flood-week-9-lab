@@ -7,7 +7,7 @@ public class StringApp {
 		int countLetters;
 		int countVowels;
 		String secondLetters;
-		int[] positions;
+		String positions;
 		String replaceVowels;
 
 		// create objects
@@ -33,18 +33,26 @@ public class StringApp {
 		rv.setUserInput(userInput);
 
 		// compute
-		countLetters = co.countString();
-		countVowels = vo.countVowels();
-		secondLetters= sl.compSecondLetters();
-		positions= sp.compPositions();
-		replaceVowels= rpReplaceVowels();
+		rv.ReplaceStringVowels();
+		co.countString();
+		vo.countVowels();
+		sl.compSecondLetters();
+		sp.compPositions();
+
+		// Get
+		countLetters = co.getCountString();
+		countVowels = vo.getCountVowels();
+		secondLetters= sl.getSecond();
+		positions= sp.getpositions();
+		replaceVowels = rv.getReplace();
 
 
 
 		// output
+		System.out.println(userInput);
 		JOptionPane.showMessageDialog(null, userInput + "\nThis String Has:\n" +countLetters + " Letters & " + countVowels + " Vowels", "Character & Vowel Counter", JOptionPane.PLAIN_MESSAGE);
 		JOptionPane.showMessageDialog(null, "Every Second letter is " + secondLetters);
 		JOptionPane.showMessageDialog(null, "Your Spaces are in positions " + positions);
-		JOptionPane.showMessageDialog(null, "Your Spaces with ! in replament of Vowels is " + replaceVowels);
+		JOptionPane.showMessageDialog(null, "Your Spaces with ! in replacement of Vowels is " + replaceVowels);
 }
 }

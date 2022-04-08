@@ -13,7 +13,7 @@ public class Count {
 	}
 
 	// compute
-	public int countString() {
+	public void countString() {
 		for (int i = 0; i < userInput.length(); i++) {
 			char myChar = userInput.charAt(i);
 
@@ -21,7 +21,8 @@ public class Count {
 				strBuff.append(myChar);
 			}
 		}
-		
+	}
+	public int getCountString(){
 		//return
 		return strBuff.length();
 	}

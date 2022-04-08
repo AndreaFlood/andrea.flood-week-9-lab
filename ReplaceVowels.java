@@ -11,14 +11,15 @@ public class ReplaceVowels{
 		this.userInput=userInput;
 	}
 
-	public void ReplaceVowels(){
+	public void ReplaceStringVowels(){
 		for(int i=0; i< userInput.length();i++){
 			//Replace all the vowels with exclamation marks
-			if(userInput.charAt(i)=='a' || userInput.charAt(i)=='e' || userInput.charAt(i)=='i' || userInput.charAt(i)=='o' || userInput.charAt(i)=='u'){
+			Character character = userInput.toLowerCase().charAt(i);
+			if(character=='a' || character=='e' || character=='i' || character=='o' || character=='u'){
 				strBuff.append('!');
 			}
 			else{
-			strBuff.append(userInput.charAt(i));
+			strBuff.append(character);
 			}
 		}
 		replace=strBuff.toString();
